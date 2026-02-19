@@ -2,7 +2,7 @@
 using MyWebApp.Models;
 using MyWebApp.Services;
 
-namespace MyWebApp.Controllers
+namespace Web_Application_Task.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
