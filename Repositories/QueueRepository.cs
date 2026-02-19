@@ -4,7 +4,7 @@ using WebApplication1.Models;
 
 namespace WebApplication1.Repositories
 {
-    public class QueueRepository
+    public class QueueRepository : IQueueRepository
     {
         private readonly IMongoCollection<QueueRecord> _collection;
 

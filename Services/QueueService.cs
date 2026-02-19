@@ -5,9 +5,9 @@ namespace WebApplication1.Services
 {
     public class QueueService
     {
-        private readonly QueueRepository _repository;
+        private readonly IQueueRepository _repository;
 
-        public QueueService(QueueRepository repository)
+        public QueueService(IQueueRepository repository)
         {
             _repository = repository;
         }

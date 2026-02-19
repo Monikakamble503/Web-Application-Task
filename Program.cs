@@ -7,8 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.Configure<MongoDbSettings>(
     builder.Configuration.GetSection("MongoDbSettings"));
 
-builder.Services.AddSingleton<QueueRepository>();
-
+builder.Services.AddSingleton<IQueueRepository, QueueRepository>();
 builder.Services.AddScoped<QueueService>();
 
 builder.Services.AddCors(options =>
