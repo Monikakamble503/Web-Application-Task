@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MyWebApp.Models;
-using MyWebApp.Services;
+using WebApplication1.Models;
+using WebApplication1.Services;
 
 namespace Web_Application_Task.Controllers
 {

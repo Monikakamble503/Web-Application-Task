@@ -1,24 +1,28 @@
-﻿using MyWebApp.Models;
+﻿using WebApplication1.Models;
+using WebApplication1.Repositories;
 
-public class QueueService
+namespace WebApplication1.Services
 {
-    private readonly QueueRepository _repository;
-
-    public QueueService(QueueRepository repository)
+    public class QueueService
     {
-        _repository = repository;
-    }
+        private readonly QueueRepository _repository;
 
-    public async Task<List<QueueRecord>> GetRecordsForDisplayAsync()
-    {
-        return await _repository.GetAllAsync();
-    }
+        public QueueService(QueueRepository repository)
+        {
+            _repository = repository;
+        }
 
-    public async Task AddRecordAsync(QueueRecord record)
-    {
-        if (string.IsNullOrWhiteSpace(record.QueueName))
-            throw new ArgumentException("Queue Name cannot be empty");
+        public async Task<List<QueueRecord>> GetRecordsForDisplayAsync()
+        {
+            return await _repository.GetAllAsync();
+        }
 
-        await _repository.CreateAsync(record);
+        public async Task AddRecordAsync(QueueRecord record)
+        {
+            if (string.IsNullOrWhiteSpace(record.QueueName))
+                throw new ArgumentException("Queue Name cannot be empty");
+
+            await _repository.CreateAsync(record);
+        }
     }
 }

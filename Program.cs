@@ -1,6 +1,6 @@
-using MyWebApp.Models;
-using MyWebApp.Repositories;
-using MyWebApp.Services;
+using WebApplication1.Models;
+using WebApplication1.Repositories;
+using WebApplication1.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
